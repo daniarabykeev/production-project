@@ -7,6 +7,7 @@ const AboutPage = () => {
     return (
         <div>
             {t('О сайте')}
+            <p>Fsfgresgsdr</p>
         </div>
     );
 };
