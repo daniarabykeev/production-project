@@ -5,6 +5,7 @@ import { MainPage } from 'pages/MainPage';
 import { routeConfig } from 'shared/config/routeConfig/routeConfig';
 
 const AppRouter = () => (
+    // eslint-disable-next-line i18next/no-literal-string
     <Suspense fallback={<div>...loading</div>}>
         <Routes>
             {Object.values(routeConfig).map(({ element, path }) => (
@@ -12,7 +13,8 @@ const AppRouter = () => (
                     key={path}
                     path={path}
                     element={(
-                        <Suspense fallback={<div>Loading...</div>}>
+                        // eslint-disable-next-line i18next/no-literal-string
+                        <Suspense fallback={<div>Loading....</div>}>
                             <div className="page-wrapper">
                                 {element}
                             </div>
