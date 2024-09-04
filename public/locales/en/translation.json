@@ -6,5 +6,7 @@
   "новый перевод": "new translation",
   "Главная": "Main",
   "toggle": "toggle",
-  "Страница не найдена": "Page not found"
+  "Страница не найдена": "Page not found",
+  "Произошла непредвиденная ошибка": "Something wrong",
+  "Обновить страницу": "Reload page"
 }
