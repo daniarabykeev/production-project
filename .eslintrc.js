@@ -4,7 +4,7 @@ module.exports = {
         es2021: true,
         jest: true,
     },
-    extends: ['plugin:react/recommended', 'airbnb', 'plugin:i18next/recommended', 'prettier'],
+    extends: ['plugin:react/recommended', 'airbnb', 'plugin:i18next/recommended', 'prettier', 'plugin:storybook/recommended', 'plugin:storybook/recommended'],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaFeatures: {
@@ -35,7 +35,7 @@ module.exports = {
             'error',
             {
                 markupOnly: true,
-                ignoreAttribute: ['to'],
+                ignoreAttribute: ['to', 'data-testid'],
             },
         ],
         'max-len': [
@@ -49,4 +49,12 @@ module.exports = {
     globals: {
         __IS_DEV__: true,
     },
+    overrides: [
+        {
+            files: ['**/src/**/*.test.{ts,tsx}'],
+            rules: {
+                'i18next/no-literal-string': 'off',
+            },
+        },
+    ],
 };
